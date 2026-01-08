@@ -1,317 +1,346 @@
-import React from 'react';
-import { FileText, Database, Shield, MessageSquare, TrendingUp } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA + ERP Delphin</title>
 
-export default function DocumentoIADelphin() {
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        {/* Cabeçalho */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
-          <div className="flex items-center gap-3 mb-4">
-            <Database className="w-10 h-10" />
-            <h1 className="text-3xl font-bold">Integração de Inteligência Artificial com ERP Delphin</h1>
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --gray-bg: #f4f6f8;
+      --text: #374151;
+      --title: #111827;
+      --card: #ffffff;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue",
+                   Arial, sans-serif;
+      background: var(--gray-bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      padding: 48px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    /* Content */
+    main {
+      padding: 48px;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      color: var(--title);
+      border-left: 5px solid var(--blue);
+      padding-left: 14px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Architecture blocks */
+    .block {
+      padding: 20px;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+    }
+
+    .green { background: #ecfdf5; border-left: 5px solid #10b981; }
+    .purple { background: #f5f3ff; border-left: 5px solid #8b5cf6; }
+    .orange { background: #fff7ed; border-left: 5px solid #f97316; }
+    .red { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+    /* Security */
+    .security {
+      background: #fff1f2;
+      border: 2px solid #fecdd3;
+      padding: 28px;
+      border-radius: var(--radius);
+    }
+
+    .security h3 {
+      color: #991b1b;
+      margin-top: 0;
+    }
+
+    .forbidden {
+      background: #ffffff;
+      border: 1px solid #fecaca;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .allowed {
+      background: #ecfdf5;
+      border: 1px solid #86efac;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    /* Benefits grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      padding: 20px;
+      border-radius: var(--radius);
+      background: #f9fafb;
+    }
+
+    /* Footer */
+    footer {
+      background: #f3f4f6;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.9rem;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 768px) {
+      header, main {
+        padding: 28px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Integração de Inteligência Artificial com ERP Delphin</h1>
+      <p>Análise, consultas e simulações de dados via interface conversacional</p>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>1. Introdução</h2>
+        <p>
+          Este documento apresenta a proposta conceitual de integração de uma
+          solução de Inteligência Artificial, como o DeepSeek, ao ERP Delphin.
+        </p>
+        <p>
+          O objetivo é permitir que usuários realizem consultas, análises e
+          simulações de negócio por meio de linguagem natural, mantendo
+          total segurança e integridade dos dados.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Objetivo da Solução</h2>
+        <div class="card">
+          <ul>
+            <li>Geração de relatórios personalizados</li>
+            <li>Consultas em linguagem natural</li>
+            <li>Análises de dados históricos</li>
+            <li>Simulação de cenários financeiros</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Arquitetura da Solução</h2>
+
+        <div class="block green">
+          <strong>Interface de Chat</strong>
+          <p>
+            Ponto de interação com o usuário, integrado ao ERP, onde
+            solicitações são feitas em linguagem natural.
+          </p>
+        </div>
+
+        <div class="block purple">
+          <strong>Motor de Inteligência Artificial</strong>
+          <p>
+            Responsável por interpretar solicitações, compreender o contexto
+            do negócio e gerar consultas estruturadas.
+          </p>
+        </div>
+
+        <div class="block orange">
+          <strong>Camada de Tradução e Validação</strong>
+          <p>
+            Converte intenções em SQL compatível com Firebird 2.5,
+            garantindo execução apenas de SELECT.
+          </p>
+        </div>
+
+        <div class="block red">
+          <strong>Banco de Dados Firebird 2.5</strong>
+          <p>
+            Fonte oficial dos dados do ERP Delphin, acessada exclusivamente
+            em modo leitura.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Funcionalidades</h2>
+
+        <div class="card">
+          <strong>Relatórios e Análises</strong>
+          <p>
+            Extração de dados, comparações entre períodos, análise de margens,
+            desempenho de produtos e clientes.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>Simulação de Cenários</strong>
+          <p>
+            Avaliação de impactos financeiros, como aumento de preços,
+            alterações de volume e projeções baseadas em histórico.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>Insights Automáticos</strong>
+          <p>
+            Identificação de padrões, alertas de desempenho atípico
+            e oportunidades de otimização.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Segurança e Restrições</h2>
+
+        <div class="security">
+          <h3>Segurança como prioridade absoluta</h3>
+          <p>
+            A solução opera com múltiplas camadas de validação para impedir
+            qualquer operação destrutiva.
+          </p>
+
+          <div class="forbidden">
+            <strong>Comandos Proibidos</strong>
+            <ul>
+              <li>DELETE</li>
+              <li>UPDATE</li>
+              <li>INSERT</li>
+              <li>DROP</li>
+              <li>ALTER</li>
+              <li>TRUNCATE</li>
+              <li>CREATE</li>
+            </ul>
           </div>
-          <p className="text-blue-100">Análise e Consulta de Dados via Interface de Chat</p>
+
+          <div class="allowed">
+            <strong>Comando Permitido</strong>
+            <p>SELECT (somente leitura de dados)</p>
+          </div>
         </div>
+      </section>
 
-        {/* Conteúdo */}
-        <div className="p-8 space-y-8">
-          
-          {/* Introdução */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <FileText className="w-6 h-6 text-blue-600" />
-              1. Introdução
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-3">
-              Este documento apresenta a proposta conceitual para integração de uma solução de Inteligência Artificial, como o DeepSeek, ao ERP Delphin, visando oferecer aos usuários uma interface conversacional para geração de relatórios, consultas, análises de dados e simulações de cenários de negócio.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              A solução proposta foca exclusivamente em operações de leitura e análise, garantindo a integridade e segurança do banco de dados através de restrições rigorosas contra operações de modificação.
-            </p>
-          </section>
+      <section>
+        <h2>6. Benefícios Esperados</h2>
 
-          {/* Objetivo */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <TrendingUp className="w-6 h-6 text-blue-600" />
-              2. Objetivo da Solução
-            </h2>
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
-              <p className="text-gray-700 leading-relaxed mb-3">
-                Permitir que usuários do ERP Delphin interajam de forma natural através de um chat para:
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold mt-1">•</span>
-                  <span>Gerar relatórios personalizados sob demanda</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold mt-1">•</span>
-                  <span>Realizar consultas complexas em linguagem natural</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold mt-1">•</span>
-                  <span>Obter análises e insights sobre dados históricos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-600 font-bold mt-1">•</span>
-                  <span>Simular cenários de negócio e avaliar impactos financeiros</span>
-                </li>
-              </ul>
-            </div>
-          </section>
+        <div class="grid">
+          <div class="benefit">
+            <strong>Acessibilidade</strong>
+            <p>Usuários não técnicos acessam dados com facilidade.</p>
+          </div>
 
-          {/* Arquitetura */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <Database className="w-6 h-6 text-blue-600" />
-              3. Arquitetura da Solução
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              A integração será composta pelos seguintes componentes principais:
-            </p>
-            
-            <div className="space-y-4">
-              <div className="border-l-4 border-green-500 bg-green-50 p-4 rounded">
-                <h3 className="font-bold text-gray-800 mb-2">3.1. Interface de Chat</h3>
-                <p className="text-gray-700">
-                  Componente visual integrado ao ERP Delphin onde os usuários digitam suas solicitações em linguagem natural. Esta interface captura as mensagens do usuário e exibe as respostas da IA de forma estruturada e compreensível.
-                </p>
-              </div>
+          <div class="benefit">
+            <strong>Agilidade</strong>
+            <p>Redução drástica do tempo para gerar análises.</p>
+          </div>
 
-              <div className="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
-                <h3 className="font-bold text-gray-800 mb-2">3.2. Motor de Inteligência Artificial</h3>
-                <p className="text-gray-700">
-                  Modelo de linguagem (como DeepSeek ou similar) responsável por interpretar as solicitações dos usuários, compreender o contexto do negócio e traduzir as intenções em consultas estruturadas ao banco de dados. Este componente também formata as respostas de forma clara e orientada ao contexto empresarial.
-                </p>
-              </div>
+          <div class="benefit">
+            <strong>Decisão Estratégica</strong>
+            <p>Simulações antes de executar mudanças reais.</p>
+          </div>
 
-              <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
-                <h3 className="font-bold text-gray-800 mb-2">3.3. Camada de Tradução e Validação</h3>
-                <p className="text-gray-700">
-                  Módulo intermediário que recebe as instruções da IA e as converte em consultas SQL válidas para o Firebird 2.5. Esta camada é crucial pois implementa todas as regras de segurança, garantindo que apenas comandos SELECT sejam executados e bloqueando qualquer tentativa de operação destrutiva.
-                </p>
-              </div>
-
-              <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded">
-                <h3 className="font-bold text-gray-800 mb-2">3.4. Banco de Dados Firebird 2.5</h3>
-                <p className="text-gray-700">
-                  Base de dados do ERP Delphin onde residem todas as informações operacionais, financeiras e gerenciais da empresa. A integração acessará estes dados exclusivamente para leitura, preservando a integridade completa do sistema.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Funcionalidades */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <MessageSquare className="w-6 h-6 text-blue-600" />
-              4. Funcionalidades Principais
-            </h2>
-            
-            <div className="space-y-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-bold text-gray-800 mb-2">4.1. Geração de Relatórios</h3>
-                <p className="text-gray-700">
-                  Os usuários poderão solicitar relatórios personalizados através de comandos naturais, como "mostre as vendas do último trimestre por categoria de produto". A IA interpretará a solicitação, extrairá os dados necessários e apresentará o resultado em formato adequado, seja tabular, gráfico ou textual.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-bold text-gray-800 mb-2">4.2. Consultas e Análises</h3>
-                <p className="text-gray-700">
-                  Capacidade de realizar consultas complexas sem necessidade de conhecimento técnico em SQL ou estrutura do banco de dados. Exemplos incluem identificar produtos com melhor margem de lucro, comparar desempenho entre períodos, analisar comportamento de clientes e identificar tendências de mercado.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-bold text-gray-800 mb-2">4.3. Simulações de Cenários</h3>
-                <p className="text-gray-700">
-                  Funcionalidade avançada que permite aos usuários simular situações hipotéticas baseadas em dados históricos. Por exemplo, avaliar o impacto financeiro de um aumento de preço de dez centavos em determinado produto ao longo de períodos específicos, calculando a variação no lucro considerando o volume de vendas histórico e outras variáveis relevantes.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-bold text-gray-800 mb-2">4.4. Insights Automáticos</h3>
-                <p className="text-gray-700">
-                  A IA poderá identificar e sugerir insights proativamente, como alertar sobre quedas atípicas em vendas, identificar produtos com estoque crítico, reconhecer padrões sazonais ou sugerir oportunidades de otimização baseadas na análise dos dados disponíveis.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Segurança */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <Shield className="w-6 h-6 text-red-600" />
-              5. Segurança e Restrições
-            </h2>
-            
-            <div className="bg-red-50 border-2 border-red-200 p-6 rounded-lg">
-              <h3 className="font-bold text-red-800 mb-3 text-lg">Restrições Críticas de Segurança</h3>
-              
-              <div className="space-y-3 text-gray-700">
-                <p className="leading-relaxed">
-                  A segurança dos dados é prioridade máxima na arquitetura desta solução. Todas as medidas de proteção serão implementadas em múltiplas camadas para garantir que nenhuma operação destrutiva ou modificadora possa ser executada acidentalmente ou maliciosamente.
-                </p>
-                
-                <div className="bg-white p-4 rounded border border-red-300 mt-4">
-                  <h4 className="font-bold text-red-700 mb-2">Comandos Estritamente Proibidos:</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>DELETE</strong> - Exclusão de registros</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>UPDATE</strong> - Atualização de dados</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>INSERT</strong> - Inserção de novos registros</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>DROP</strong> - Remoção de estruturas</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>ALTER</strong> - Modificação de estruturas</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>TRUNCATE</strong> - Limpeza de tabelas</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">✗</span>
-                      <span><strong>CREATE</strong> - Criação de estruturas</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-100 p-4 rounded border border-green-400 mt-4">
-                  <h4 className="font-bold text-green-800 mb-2">Comando Permitido:</h4>
-                  <p className="flex items-center gap-2">
-                    <span className="text-green-600 font-bold text-xl">✓</span>
-                    <span><strong>SELECT</strong> - Exclusivamente para consultas e leitura de dados</span>
-                  </p>
-                </div>
-
-                <p className="mt-4 leading-relaxed">
-                  A camada de validação implementará filtros rigorosos que analisarão cada consulta gerada pela IA antes da execução. Qualquer tentativa de incluir comandos proibidos, mesmo que disfarçados ou ofuscados, será automaticamente bloqueada e registrada para auditoria.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-4 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-              <h4 className="font-bold text-gray-800 mb-2">Medidas Adicionais de Segurança</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 font-bold mt-1">•</span>
-                  <span>Uso de credenciais de banco de dados com permissões exclusivas de leitura</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 font-bold mt-1">•</span>
-                  <span>Registro detalhado de todas as consultas executadas para fins de auditoria</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 font-bold mt-1">•</span>
-                  <span>Validação sintática e semântica antes da execução de qualquer query</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 font-bold mt-1">•</span>
-                  <span>Timeout configurável para evitar consultas excessivamente longas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-yellow-600 font-bold mt-1">•</span>
-                  <span>Controle de acesso baseado em perfis de usuário do ERP</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Benefícios */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">6. Benefícios Esperados</h2>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-bold text-blue-800 mb-2">Acessibilidade</h3>
-                <p className="text-gray-700 text-sm">
-                  Democratização do acesso a dados, permitindo que usuários sem conhecimento técnico obtenham informações valiosas de forma autônoma.
-                </p>
-              </div>
-
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h3 className="font-bold text-green-800 mb-2">Agilidade</h3>
-                <p className="text-gray-700 text-sm">
-                  Redução significativa no tempo necessário para obter relatórios e análises, eliminando a dependência de equipes técnicas para consultas rotineiras.
-                </p>
-              </div>
-
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h3 className="font-bold text-purple-800 mb-2">Tomada de Decisão</h3>
-                <p className="text-gray-700 text-sm">
-                  Capacidade de simular cenários e avaliar impactos de decisões antes da implementação, aumentando a segurança estratégica.
-                </p>
-              </div>
-
-              <div className="bg-orange-50 p-4 rounded-lg">
-                <h3 className="font-bold text-orange-800 mb-2">Produtividade</h3>
-                <p className="text-gray-700 text-sm">
-                  Liberação de recursos humanos especializados para atividades mais estratégicas, automatizando consultas e análises repetitivas.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Considerações Técnicas */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">7. Considerações Técnicas</h2>
-            
-            <div className="space-y-3 text-gray-700">
-              <p className="leading-relaxed">
-                <strong>Compatibilidade com Firebird 2.5:</strong> A solução deve considerar as especificidades e limitações do Firebird 2.5, garantindo que todas as consultas geradas sejam compatíveis com esta versão do banco de dados.
-              </p>
-              
-              <p className="leading-relaxed">
-                <strong>Integração com Delphi:</strong> A interface de chat e os componentes de integração devem ser desenvolvidos ou adaptados para funcionarem harmoniosamente dentro do ambiente Delphi (Embarcadero), respeitando os padrões arquiteturais do ERP Delphin.
-              </p>
-              
-              <p className="leading-relaxed">
-                <strong>Performance:</strong> É fundamental implementar mecanismos de otimização para garantir que as consultas geradas sejam eficientes e não impactem negativamente o desempenho do sistema, especialmente em horários de pico de utilização.
-              </p>
-              
-              <p className="leading-relaxed">
-                <strong>Treinamento do Modelo:</strong> A IA deve ser treinada ou configurada com conhecimento específico sobre o esquema do banco de dados do ERP Delphin, terminologia do negócio e padrões de consulta mais comuns para maximizar a precisão das respostas.
-              </p>
-
-              <p className="leading-relaxed">
-                <strong>Contexto de Negócio:</strong> O sistema deve compreender conceitos específicos do domínio empresarial onde o ERP atua, incluindo terminologia de produtos, processos comerciais, estruturas organizacionais e métricas de desempenho relevantes.
-              </p>
-            </div>
-          </section>
-
-          {/* Conclusão */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">8. Conclusão</h2>
-            <p className="text-gray-700 leading-relaxed mb-3">
-              A integração de Inteligência Artificial ao ERP Delphin representa uma evolução significativa na forma como os usuários interagem com os dados corporativos. Através de uma interface conversacional intuitiva, a solução proposta visa democratizar o acesso à informação, acelerar processos analíticos e fornecer capacidades avançadas de simulação de cenários.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              A arquitetura proposta, com seu foco rigoroso em segurança e restrições contra operações modificadoras de dados, garante que todos os benefícios da IA possam ser aproveitados sem comprometer a integridade do sistema legado. Esta abordagem conservadora em termos de segurança, combinada com a inovação na experiência do usuário, posiciona a solução como uma ferramenta estratégica que aumenta o valor do investimento existente no ERP Delphin.
-            </p>
-          </section>
-
+          <div class="benefit">
+            <strong>Produtividade</strong>
+            <p>Menos dependência de equipes técnicas.</p>
+          </div>
         </div>
+      </section>
 
-        {/* Rodapé */}
-        <div className="bg-gray-100 p-6 text-center text-gray-600 text-sm border-t">
-          <p>Documento Técnico - Integração IA com ERP Delphin</p>
-          <p className="mt-1">Este documento apresenta uma visão conceitual da solução proposta a uso de IA no software</p>
-        </div>
-      </div>
-    </div>
-  );
-}
+      <section>
+        <h2>7. Conclusão</h2>
+        <p>
+          A integração de IA ao ERP Delphin transforma a forma como os dados
+          corporativos são explorados, oferecendo inteligência acessível,
+          segura e estratégica.
+        </p>
+        <p>
+          Com foco rigoroso em segurança e leitura de dados, a solução agrega
+          valor sem comprometer a integridade do sistema legado.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Documento Técnico — Integração de IA com ERP Delphin</p>
+      <p>Visão conceitual da solução proposta</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
